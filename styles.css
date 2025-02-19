@@ -1,22 +1,24 @@
 /* General Styles */
 body {
-    background-color: #f4d03f;
-    font-family: 'Press Start 2P', cursive;
+    background-color: #F8FAFC;
+    font-family: 'Orbitron', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 /* Header and Navigation */
 header {
-    background-color: #ff5733;
+    background-color: #BCCCDC;
     padding: 20px;
 }
 
 .logo {
     font-size: 24px;
-    color: white;
-    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .nav-links {
@@ -30,13 +32,23 @@ header {
 }
 
 .nav-links a {
-    color: white;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Section Styling */
 section {
-    padding: 20px;
+    padding: 40px 20px;
+    background-color: #D9EAFD;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2E4057;
 }
 
 /* Skills Section */
@@ -46,37 +58,12 @@ section {
 }
 
 #skills li {
-    background: #2e86c1;
+    background: #9AA6B2;
     color: white;
     display: inline-block;
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
-}
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 80%;
-    font-family: 'Press Start 2P', cursive;
-    border: 2px solid #ff5733;
-    background-color: #f4d03f;
-}
-
-button {
-    background-color: #ff5733;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 /* Responsive Navigation */
