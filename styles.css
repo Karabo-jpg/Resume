@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     background-color: #F8FAFC;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Daddy-O', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -15,7 +15,8 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-family: 'Candice', sans-serif;
+    font-size: 36px;
     color: #333;
     font-weight: bold;
     text-transform: uppercase;
@@ -32,6 +33,7 @@ header {
 }
 
 .nav-links a {
+    font-family: 'Daddy-O', sans-serif;
     color: #333;
     text-decoration: none;
     font-weight: bold;
@@ -47,8 +49,9 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #2E4057;
+    font-family: 'Candice', sans-serif;
 }
 
 /* Skills Section */

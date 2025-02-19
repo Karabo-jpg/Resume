@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Form Validation
+// Form Validation (if a contact form exists)
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contact-form");
     const emailField = document.querySelector("#email");
