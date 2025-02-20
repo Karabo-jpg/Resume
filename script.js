@@ -1,68 +1,60 @@
-// Smooth scrolling for navbar links
-document.querySelectorAll("nav ul li a").forEach(anchor => {
-    anchor.addEventListener("click", function(event) {
-        event.preventDefault();
-        const sectionId = this.getAttribute("href").substring(1);
-        document.getElementById(sectionId).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
-
-// Contact button interaction
-document.getElementById("contactBtn").addEventListener("click", function() {
-    let email = prompt("Enter your email address to contact me:");
-    
-    if (email && validateEmail(email)) {
-        alert("Thank you! I'll reach out to you soon.");
-    } else if (email !== null) {
-        alert("Please enter a valid email address.");
-    }
-});
-
-// Email validation function
-function validateEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-// Hover effects for project cards
-document.querySelectorAll(".project").forEach(project => {
-    project.addEventListener("mouseover", function() {
-        this.style.transform = "scale(1.05)";
-        this.style.transition = "transform 0.3s ease-in-out";
-    });
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
 
-    project.addEventListener("mouseleave", function() {
-        this.style.transform = "scale(1)";
-    });
-});
+header {
+    background: #b0bec5;
+    padding: 10px 0;
+}
 
-// Responsive navbar toggle (for mobile)
-const menuToggle = document.createElement("div");
-menuToggle.innerHTML = "☰";
-menuToggle.id = "menuToggle";
-menuToggle.style.cursor = "pointer";
-menuToggle.style.display = "none";
+header h1 {
+    margin: 0;
+    text-align: center;
+}
 
-document.querySelector("header").appendChild(menuToggle);
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-menuToggle.addEventListener("click", function() {
-    const nav = document.querySelector("nav ul");
-    if (nav.style.display === "block") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "block";
-    }
-});
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-// Ensure menu toggle only appears in mobile view
-window.addEventListener("resize", function() {
-    if (window.innerWidth < 768) {
-        menuToggle.style.display = "block";
-        document.querySelector("nav ul").style.display = "none";
-    } else {
-        menuToggle.style.display = "none";
-        document.querySelector("nav ul").style.display = "flex";
-    }
-});
+.section {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project {
+    width: 45%;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
