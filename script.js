@@ -1,47 +1,68 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(event) {
+// Smooth scrolling for navbar links
+document.querySelectorAll("nav ul li a").forEach(anchor => {
+    anchor.addEventListener("click", function(event) {
         event.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        document.getElementById(targetId).scrollIntoView({
-            behavior: 'smooth'
+        const sectionId = this.getAttribute("href").substring(1);
+        document.getElementById(sectionId).scrollIntoView({
+            behavior: "smooth"
         });
     });
 });
 
-// Toggle mobile menu
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-    });
-}
-
-// Form validation (Ensures required fields are filled)
-document.addEventListener("DOMContentLoaded", function() {
-    const contactForm = document.getElementById("contact-form");
-    if (contactForm) {
-        contactForm.addEventListener("submit", function(event) {
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            if (!name || !email || !message) {
-                event.preventDefault();
-                alert("Please fill in all required fields.");
-            } else {
-                alert("Form submitted successfully!");
-            }
-        });
+// Contact button interaction
+document.getElementById("contactBtn").addEventListener("click", function() {
+    let email = prompt("Enter your email address to contact me:");
+    
+    if (email && validateEmail(email)) {
+        alert("Thank you! I'll reach out to you soon.");
+    } else if (email !== null) {
+        alert("Please enter a valid email address.");
     }
 });
 
-// Auto-update footer year
-document.addEventListener("DOMContentLoaded", function() {
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+// Email validation function
+function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+// Hover effects for project cards
+document.querySelectorAll(".project").forEach(project => {
+    project.addEventListener("mouseover", function() {
+        this.style.transform = "scale(1.05)";
+        this.style.transition = "transform 0.3s ease-in-out";
+    });
+
+    project.addEventListener("mouseleave", function() {
+        this.style.transform = "scale(1)";
+    });
+});
+
+// Responsive navbar toggle (for mobile)
+const menuToggle = document.createElement("div");
+menuToggle.innerHTML = "☰";
+menuToggle.id = "menuToggle";
+menuToggle.style.cursor = "pointer";
+menuToggle.style.display = "none";
+
+document.querySelector("header").appendChild(menuToggle);
+
+menuToggle.addEventListener("click", function() {
+    const nav = document.querySelector("nav ul");
+    if (nav.style.display === "block") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "block";
+    }
+});
+
+// Ensure menu toggle only appears in mobile view
+window.addEventListener("resize", function() {
+    if (window.innerWidth < 768) {
+        menuToggle.style.display = "block";
+        document.querySelector("nav ul").style.display = "none";
+    } else {
+        menuToggle.style.display = "none";
+        document.querySelector("nav ul").style.display = "flex";
     }
 });

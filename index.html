@@ -8,71 +8,68 @@
 </head>
 <body>
 
+    <!-- Background Image -->
+    <div class="background"></div>
+
     <!-- Navbar -->
     <header>
-        <button id="menu-toggle">☰</button>
-        <nav id="nav-menu">
+        <h1>Karabo Ojiambo</h1>
+        <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="profile-container">
-            <img src="images/profile.jpg" alt="Profile Picture">
-            <h1>Karabo Ojiambo</h1>
-            <p>Junior Full Stack Developer</p>
-        </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+        <h2>Karabo Ojiambo</h2>
+        <p>A creative and dynamic professional blending innovation with software engineering, production assistance, and youth coordination.</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Passionate about web development, problem-solving, and creating efficient solutions.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <span>Proofreading</span>
+            <span>Data Accuracy</span>
+            <span>Document Preparation</span>
+            <span>Software Engineering</span>
+            <span>Customer Relationship Management</span>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="section">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Regex - Onboarding Hackathon</h3>
-            <p>A regex-based data extraction project for web applications.</p>
-            <a href="https://github.com/Karabo-jpg/alu_regex-data-extraction-karabo-jpg.git" target="_blank">View Project</a>
-        </div>
-        <div class="project">
-            <h3>Responsive Web Design - Resume Assignment</h3>
-            <p>Personal resume website showcasing my experience and skills.</p>
-            <a href="https://karabo-jpg.github.io/Resume/" target="_blank">View Project</a>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Regex - Onboarding Hackathon</h3>
+                <p>Data extraction project using regex patterns.</p>
+                <a href="https://github.com/Karabo-jpg/alu_regex-data-extraction-karabo-jpg.git" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Responsive Web Design - Resume Assignment</h3>
+                <p>Fully responsive personal resume website.</p>
+                <a href="https://karabo-jpg.github.io/Resume/" target="_blank">View Live Site</a>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:karaboinnocent@hotmail.com">karaboinnocent@hotmail.com</a></p>
+        <p>Phone: +256 785 762292</p>
+        <button id="contactBtn">Open Contact Form</button>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; <span id="year"></span> Karabo Ojiambo. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
