@@ -5,87 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karabo Ojiambo - Resume</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Candice&family=Daddy-O&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Navbar -->
     <header>
-        <nav>
-            <div class="logo">Karabo Ojiambo</div>
-            <ul class="nav-links">
+        <button id="menu-toggle">☰</button>
+        <nav id="nav-menu">
+            <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h1>Karabo Ojiambo</h1>
-        <p>A creative and dynamic professional blending innovation with software engineering, production assistance, and youth coordination.</p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="profile-container">
+            <img src="images/profile.jpg" alt="Profile Picture">
+            <h1>Karabo Ojiambo</h1>
+            <p>Junior Full Stack Developer</p>
+        </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Proofreading</li>
-            <li>Data Accuracy</li>
-            <li>Document Preparation</li>
-            <li>Software Engineering</li>
-            <li>Customer Relationship Management</li>
-        </ul>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Passionate about web development, problem-solving, and creating efficient solutions.</p>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project-slider">
-            <div class="slide">
-                <img src="project1.jpg" alt="Project 1">
-                <p>Project 1 - Description</p>
-            </div>
-            <div class="slide">
-                <img src="project2.jpg" alt="Project 2">
-                <p>Project 2 - Description</p>
-            </div>
-            <div class="slide">
-                <img src="project3.jpg" alt="Project 3">
-                <p>Project 3 - Description</p>
-            </div>
+        <div class="project">
+            <h3>Regex - Onboarding Hackathon</h3>
+            <p>A regex-based data extraction project for web applications.</p>
+            <a href="https://github.com/Karabo-jpg/alu_regex-data-extraction-karabo-jpg.git" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Responsive Web Design - Resume Assignment</h3>
+            <p>Personal resume website showcasing my experience and skills.</p>
+            <a href="https://karabo-jpg.github.io/Resume/" target="_blank">View Project</a>
         </div>
     </section>
 
-    <!-- Contact Section with Modal -->
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
-        <button id="contact-btn">Open Contact Form</button>
-
-        <!-- Modal -->
-        <div id="contact-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h3>Contact Me</h3>
-                <form id="contact-form">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </div>
-        
-        <p>Email: <a href="mailto:karaboinnocent@hotmail.com">karaboinnocent@hotmail.com</a></p>
-        <p>Phone: +256 785 762292</p>
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <!-- Scroll-to-Top Button -->
-    <button id="scroll-top-btn" class="scroll-top-btn">↑</button>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Karabo Ojiambo. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+

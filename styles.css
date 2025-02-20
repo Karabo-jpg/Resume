@@ -1,158 +1,113 @@
-/* General Styles */
+/* Import Fonts */
+@font-face {
+    font-family: 'Candice';
+    src: url('fonts/Candice.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Daddy-O';
+    src: url('fonts/Daddy-O.ttf') format('truetype');
+}
+
+/* Global Styles */
 body {
-    background-color: #F8FAFC;
     font-family: 'Daddy-O', sans-serif;
-    text-align: center;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Header and Navigation */
+/* Navbar */
 header {
-    background-color: #BCCCDC;
-    padding: 20px;
+    background-color: #D9EAFD;
+    padding: 10px;
+    text-align: center;
 }
 
-.logo {
-    font-size: 24px;
-    color: #333;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.nav-links {
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-.nav-links li {
+nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
-.nav-links a {
-    color: #333;
+nav ul li a {
     text-decoration: none;
-    font-weight: bold;
+    color: #000;
 }
 
-/* Section Styling */
-section {
-    padding: 40px 20px;
-    background-color: #D9EAFD;
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px;
 }
 
-h1, h2 {
-    color: #2E4057;
-}
-
-/* Skills Section */
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#skills li {
-    background: #9AA6B2;
-    color: white;
-    display: inline-block;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
-}
-
-/* Project Slider */
-.project-slider {
-    display: flex;
-    overflow-x: scroll;
-    gap: 15px;
-    justify-content: center;
-}
-
-.project-slider .slide {
-    width: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-slider .slide img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Scroll-to-Top Button */
-.scroll-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #BCCCDC;
-    border: none;
+.profile-container img {
+    width: 150px;
     border-radius: 50%;
-    cursor: pointer;
-    display: none;
 }
 
-.scroll-top-btn:hover {
+h1, h2, h3 {
+    font-family: 'Candice', cursive;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+}
+
+/* Projects */
+.project {
+    background: #BCCCDC;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.project a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+}
+
+button {
     background-color: #9AA6B2;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
 }
 
-/* Responsive Layout */
-@media screen and (max-width: 768px) {
-    .nav-links {
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
         display: none;
-        flex-direction: column;
     }
 
-    .nav-links.show {
-        display: flex;
+    #menu-toggle {
+        display: block;
     }
 
-    .project-slider {
-        flex-direction: column;
+    nav ul.active {
+        display: block;
     }
 }

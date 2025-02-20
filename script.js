@@ -1,50 +1,47 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Mobile Navbar Toggle
-    const nav = document.querySelector(".nav-links");
-    document.querySelector(".logo").addEventListener("click", function () {
-        nav.classList.toggle("show");
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
+});
 
-    // Modal Open/Close
-    const modal = document.getElementById("contact-modal");
-    const modalBtn = document.getElementById("contact-btn");
-    const closeBtn = document.querySelector(".close");
+// Toggle mobile menu
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
 
-    modalBtn.addEventListener("click", function () {
-        modal.style.display = "block";
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
     });
+}
 
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
+// Form validation (Ensures required fields are filled)
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(event) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-    // Form Validation
-    const form = document.getElementById("contact-form");
-    const emailField = document.querySelector("#email");
-
-    if (form && emailField) {
-        form.addEventListener("submit", function (event) {
-            const email = emailField.value;
-            if (!email.includes("@") || !email.includes(".")) {
+            if (!name || !email || !message) {
                 event.preventDefault();
-                alert("Please enter a valid email address!");
+                alert("Please fill in all required fields.");
+            } else {
+                alert("Form submitted successfully!");
             }
         });
     }
+});
 
-    // Scroll-to-Top Button
-    const scrollTopBtn = document.getElementById("scroll-top-btn");
-
-    window.onscroll = function () {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollTopBtn.style.display = "block";
-        } else {
-            scrollTopBtn.style.display = "none";
-        }
-    };
-
-    scrollTopBtn.addEventListener("click", function () {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    });
+// Auto-update footer year
+document.addEventListener("DOMContentLoaded", function() {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 });
