@@ -2,20 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/background.jpg');
+    background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
-    color: #333;
 }
 
 header {
-    background-color: #A3B1C6;
-    padding: 15px;
+    background-color: #b0c4de;
+    padding: 10px;
     text-align: center;
-}
-
-h1 {
-    color: black;
 }
 
 nav ul {
@@ -28,26 +22,48 @@ nav ul li {
     margin: 0 15px;
 }
 
-.content-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 
-img {
+.container {
+    background-color: #dbe8fc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.profile-pic {
     width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 
-.projects-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.skills-list span {
+    display: inline-block;
+    background-color: #b0c4de;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 .project img {
     width: 100px;
     height: 100px;
+}
+
+#contact-btn {
+    padding: 10px 15px;
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#contact-btn:hover {
+    background-color: #315f8c;
 }

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karabo Ojiambo - Resume</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
+
     <header>
-        <h1>Karabo Ojiambo</h1>
+        <h1>KARABO OJIAMBO</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -22,15 +22,14 @@
         </nav>
     </header>
 
-    <section id="about">
-        <div class="content-box">
-            <img src="images/profile.jpg" alt="Karabo Ojiambo">
+    <main>
+        <section id="about" class="container">
+            <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h2>Karabo Ojiambo</h2>
             <p>A creative and dynamic professional blending innovation with software engineering, production assistance, and youth coordination.</p>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <div class="content-box">
+        <section id="skills" class="container">
             <h2>Skills</h2>
             <div class="skills-list">
                 <span>Proofreading</span>
@@ -39,62 +38,43 @@
                 <span>Software Engineering</span>
                 <span>Customer Relationship Management</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="experience">
-        <div class="content-box">
+        <section id="experience" class="container">
             <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Software Engineering Intern</h3>
-                <p><strong>ALU Innovation Hub</strong> | 2024 - Present</p>
-                <p>Developing web applications and managing data extraction tasks using Python and JavaScript.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Freelance Proofreader</h3>
-                <p>2019 - Present</p>
-                <p>Assisted clients with document proofreading, grammar correction, and data accuracy verification.</p>
-            </div>
-        </div>
-    </section>
+            <p><strong>Software Engineering Intern</strong> - ALU (2024 - Present)</p>
+            <p>Developed and maintained web applications, ensuring optimal performance and user experience.</p>
+            
+            <p><strong>Production Assistant</strong> - XYZ Media (2022 - 2023)</p>
+            <p>Assisted in content creation, video production, and post-editing processes.</p>
+        </section>
 
-    <section id="education">
-        <div class="content-box">
+        <section id="education" class="container">
             <h2>Education</h2>
-            <div class="education-item">
-                <h3>African Leadership University</h3>
-                <p>Bachelor’s in Software Engineering | 2023 - Present</p>
-            </div>
-        </div>
-    </section>
+            <p><strong>Bachelor’s in Software Engineering</strong> - African Leadership University (2021 - 2025)</p>
+            <p>Coursework includes web development, data structures, and software architecture.</p>
+        </section>
 
-    <section id="projects">
-        <div class="content-box">
+        <section id="projects" class="container">
             <h2>Projects</h2>
-            <div class="projects-container">
-                <div class="project">
-                    <a href="https://github.com/Karabo-jpg/alu_regex-data-extraction-karabo-jpg.git" target="_blank">
-                        <img src="images/project1.png" alt="Project 1">
-                        <p>Regex - Onboarding Hackathon</p>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="https://karabo-jpg.github.io/Resume/" target="_blank">
-                        <img src="images/project2.png" alt="Project 2">
-                        <p>Responsive Web Design - Resume Assignment</p>
-                    </a>
-                </div>
+            <div class="project">
+                <img src="images/project1.jpg" alt="Project 1">
+                <a href="https://github.com/Karabo-jpg/alu_regex-data-extraction-karabo-jpg.git">Regex - Onboarding Hackathon</a>
             </div>
-        </div>
-    </section>
+            <div class="project">
+                <img src="images/project2.jpg" alt="Project 2">
+                <a href="https://karabo-jpg.github.io/Resume/">Responsive Web Design - Resume Assignment</a>
+            </div>
+        </section>
 
-    <section id="contact">
-        <div class="content-box">
+        <section id="contact" class="container">
             <h2>Contact</h2>
+            <button id="contact-btn">Open Contact Form</button>
             <p>Email: <a href="mailto:k.ojiambo@alustudent.com">k.ojiambo@alustudent.com</a></p>
             <p>Phone: +256 785 762292</p>
-        </div>
-    </section>
+        </section>
+    </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
