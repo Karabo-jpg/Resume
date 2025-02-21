@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #b0c4de;
+    background-color: #A3B1C6;
     padding: 10px;
     text-align: center;
 }
@@ -29,7 +29,7 @@ nav ul li a {
 }
 
 .container {
-    background-color: #dbe8fc;
+    background-color: #4A6572;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
@@ -45,7 +45,7 @@ nav ul li a {
 
 .skills-list span {
     display: inline-block;
-    background-color: #b0c4de;
+    background-color: #4A6572;
     padding: 5px 10px;
     border-radius: 5px;
     margin: 5px;
@@ -58,12 +58,12 @@ nav ul li a {
 
 #contact-btn {
     padding: 10px 15px;
-    background-color: #4682b4;
+    background-color: #4A6572;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 #contact-btn:hover {
-    background-color: #315f8c;
+    background-color: #4A6572;
 }
