@@ -1,60 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scroll for navigation
+    document.querySelectorAll("nav ul li a").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
 
-.container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-}
-
-header {
-    background: #b0bec5;
-    padding: 10px 0;
-}
-
-header h1 {
-    margin: 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.section {
-    background: rgba(255, 255, 255, 0.8);
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.projects-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.project {
-    width: 45%;
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
+    // Contact form validation (if added in future)
+    const emailField = document.querySelector("#contact-email");
+    if (emailField) {
+        emailField.addEventListener("input", function () {
+            if (!this.value.includes("@")) {
+                this.style.border = "2px solid red";
+            } else {
+                this.style.border = "2px solid green";
+            }
+        });
+    }
+});
