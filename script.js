@@ -10,16 +10,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
-    // Contact form validation (if added in future)
-    const emailField = document.querySelector("#contact-email");
-    if (emailField) {
-        emailField.addEventListener("input", function () {
-            if (!this.value.includes("@")) {
-                this.style.border = "2px solid red";
-            } else {
-                this.style.border = "2px solid green";
-            }
-        });
-    }
 });
